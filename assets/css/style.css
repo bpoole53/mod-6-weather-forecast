@@ -1,3 +1,7 @@
+:root {
+    --light: rgb(74, 74, 250);
+}
+
 * {
     box-sizing: border-box;
     font-size: 16px;
@@ -6,5 +10,53 @@
 #container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    margin-left: 22rem;
+}
+
+header h1 {
+    color: white;
+    height: 5rem;
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+    background-color: var(--light);
+}
+
+#search-field {
+    margin-left: 1.5%;
+    position: fixed;
+}
+
+#search-field h1 {
+    font-size: 2rem;
+}
+
+#city-name {
+    width: 18rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}    
+
+
+#city-button {
+    position: relative;
+    width: 18rem;
+    height: 2rem;
+    background-color: var(--light);
+    color: white;
+    border-radius: .25rem;
+    right: 18.3rem;
+    top: 3rem;
+}
+
+#main-forecast {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.weather-icon {
+    width: 15%;
+    height: 15%;
+    background-size: 15% 15%;
 }

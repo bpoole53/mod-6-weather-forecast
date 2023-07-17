@@ -1,4 +1,6 @@
 const apiKey = 'b457a582093a49542cd7b514701843e3';
+var container = $('#container')
+var currentWeather = document.getElementById('main-forecast')
 var cityName;
 var latitude;
 var longitude;
@@ -39,5 +41,18 @@ function getApi() {
     console.log(data.list[0].main.humidity);
     console.log(data.list[0].main.temp);
     console.log(data.list[0].wind.speed);
+    console.log(data.city.name);
+
+    var date = dayjs(data.list[0].dt_txt.split(' ')[0]).format('MM/DD/YYYY');
+    var icon = data.list[0].weather[0].icon; 
+    currentWeather.innerHTML= `${cityName} ${date} <img src = 'https://openweathermap.org/img/wn/${icon}@2x.png' class= "weather-icon"></img>`;
+    
+    
+
+    console.log(data.list[0].weather[0].icon)
+    console.log(data.list[0].dt_txt)
+    console.log(date);
+    
     })
 }
+
