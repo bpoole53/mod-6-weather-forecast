@@ -27,7 +27,7 @@ function getCoordinates () {
 }
 
 function getApi() {
-    var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
     console.log(requestUrl);
     
     fetch(requestUrl)
@@ -35,6 +35,9 @@ function getApi() {
     return response.json();
     })
     .then(function (data) {
-    console.log(data.city);
+    console.log(data);    
+    console.log(data.list[0].main.humidity);
+    console.log(data.list[0].main.temp);
+    console.log(data.list[0].wind.speed);
     })
 }
