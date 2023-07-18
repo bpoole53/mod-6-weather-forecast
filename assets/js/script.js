@@ -57,8 +57,6 @@ function getApi() {
     for (x = 8; x < data.list.length; x++) {
         if(x%8 === 0) {
         var windFive = data.list[x].wind.speed;
-        console.log(x)
-        console.log(windFive)
         var tempFive = data.list[x].main.temp;
         var humidityFive = data.list[x].main.humidity;
         var dateFive = dayjs(data.list[x].dt_txt.split(' ')[0]).format('MM/DD/YYYY');
