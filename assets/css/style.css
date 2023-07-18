@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: start;
     margin-left: 22rem;
+    margin-right: 18%;
 }
 
 header h1 {
@@ -52,11 +53,36 @@ header h1 {
 
 #main-forecast {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: bold;    
 }
 
 .weather-icon {
     width: 15%;
     height: 15%;
     background-size: 15% 15%;
+}
+
+.forecast {
+    font-size: 1.25rem;
+}
+
+#four-day {
+    margin-left:22rem;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#five-day-forecast {
+    display: flex;
+    flex-direction: row;
+    margin-left: 22rem;
+    justify-content: space-between;
+    margin-right: 18%;
+    padding-top: 3rem;
+}
+
+.five-day-stats {
+    color: white;
+    background-color: rgb(42, 67, 91);
+    padding-right: 4rem;
 }
